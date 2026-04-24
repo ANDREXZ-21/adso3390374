@@ -15,6 +15,7 @@
 |03. |CSS         |LOOK Y FEEL - CASCADING STYLE SHEET    |
 |03. |JAVASCRIPT  |BEHAVIOR - PROGRAMING LANGUAGE         |
 
+![profile](/src/imgs/3162e54b-4244-496d-a364-73d59eac7fb5-md.jpeg)
 
 [ADSO FILES DRIVE](https://tinyurl.com/wnkk334u)
 
