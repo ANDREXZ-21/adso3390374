@@ -1,0 +1,25 @@
+div.adso {
+    border-radius: 50%;
+    background-color: #197118;
+    font-size: 2.4rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    height: 240px;
+    width: 240px;
+    &:hover{
+        cursor: pointer;
+        animation: 0.4s animAdso infinite;
+
+    }
+}
+@keyframes animAdso {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.7);
+    }
+}
