@@ -293,6 +293,49 @@ html:5 —— Documento html 5
 <metac="width=device-width, initial-scale=1.0">
 </xmp>
     </section>
+    <section>
+        </xmp>
+        </section>
+
+        <section style="font-size: 0.7rem;">
+            <h2>17-Challenge Emmet <em style="font-size: 0.8rem;"> navbar </em></h2>
+            <p>Genera un header con navbar completo usando clases, atributos, texto y agrupaciones.</p>
+            <h4>Example:</h4>
+            <p>header#header>nav.navbar.navbar-inverse>div.container>(div.navbar-header>button[type="button"].navbar-toggle>(span.sr-only{Toggle navigation}+span.icon-bar+span.icon-bar+span.icon-bar)+a.navbar-brand[href="index.php"]>img[src="imges/logo.png" alt=""])+(div.collapse>ul.nav.navbar-nav>(li>a.link[href="index.html"]{Inicio})+(li.active.link>a[href="login.html"]{Ingresar})+(li>a.link[href="registro.html"]{Registrarse})+(li>a.link[href="contacto.html"]{Contacto}))</p>
+            <h4>Result:</h4>
+<xmp style="font-size: 0.4rem;">
+<header id="header">
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.php">
+                    <img src="imges/logo.png" alt="">
+                </a>
+            </div>
+            <div class="collapse">
+                <ul class="nav navbar-nav">
+                    <li><a class="link" href="index.html">Inicio</a></li>
+                    <li class="active link"><a href="login.html">Ingresar</a></li>
+                    <li><a class="link" href="registro.html">Registrarse</a></li>
+                    <li><a class="link" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+</xmp>
+        </section>
+
+    </main>
+</body>
+</html>
+    </section>
 
 
 
