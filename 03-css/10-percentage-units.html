@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 - Percentage Units</title>
+    <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        body main {
+            width: 100%;
+        }
+
+        section.percentage {
+            width: 80%;
+        }
+
+        div.parent {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        div.parent div {
+            align-items: center;
+            display: flex;
+            font-size: 2rem;
+            justify-content: center;
+            height: 50dvh;
+        }
+
+        div.parent div.child1 {
+            background-color: blueviolet;
+            width: 70%;
+        }
+
+        div.parent div.child2 {
+            background-color: lightseagreen;
+            width: 30%;
+        }
+    </style>
+</head>
+
+<body class="css">
+    <a href="index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path
+                d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
+            </path>
+        </svg>
+    </a>
+    <main>
+        <header class="mainmenu">
+            <h1>10 - Percentage Units</h1>
+            <h3>Are relative to the size of the parent element.</h3>
+        </header>
+        <main>
+            <section class="percentage">
+                <div class="parent">
+                    <div class="child1">70%</div>
+                    <div class="child2">30%</div>
+                </div>
+            </section>
+        </main>
+</body>
+
+</html>
