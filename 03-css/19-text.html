@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19-text</title>
+    <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        div.box {
+            border: 4px solid #fff9;
+            border-radius: 4px;
+            width: 140px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #1c2b4a;
+            background: #90caf9;
+        }
+
+        .contenedor {
+            border: 1px dashed #999;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .contenedor p {
+            margin: 6px 0;
+            border: 1px solid #ccc;
+            padding: 6px;
+        }
+
+        .align-left { text-align: left; }
+        .align-center { text-align: center; }
+        .align-right { text-align: right; }
+        .align-justify { text-align: justify; }
+
+        
+        .lh-tight { line-height: 1; }
+        .lh-normal { line-height: 1.5; }
+        .lh-loose { line-height: 2; }
+        .lh-xloose { line-height: 3; }
+
+        
+        .deco-none { text-decoration: none; }
+        .deco-underline { text-decoration: underline; }
+        .deco-overline { text-decoration: overline; }
+        .deco-linethrough { text-decoration: line-through; }
+        .deco-wavy { text-decoration: underline wavy #e53935; }
+
+        
+        .transform-upper { text-transform: uppercase; }
+        .transform-lower { text-transform: lowercase; }
+        .transform-capitalize { text-transform: capitalize; }
+        .transform-none { text-transform: none; }
+
+      
+        .indent-none { text-indent: 0; }
+        .indent-sm { text-indent: 20px; }
+        .indent-lg { text-indent: 50px; }
+        .indent-neg { text-indent: -20px; padding-left: 20px; }
+
+        
+        .spacing-word-normal { word-spacing: normal; }
+        .spacing-word-wide { word-spacing: 12px; }
+        .spacing-letter-normal { letter-spacing: normal; }
+        .spacing-letter-wide { letter-spacing: 4px; }
+        .spacing-letter-tight { letter-spacing: -1px; }
+    </style>
+</head>
+<body class="css">
+    <a href="index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
+    </a>
+    <main>
+        <header>
+            <h1>19-text</h1>
+            <h4>
+            <li>Align</li>
+            <li>Line Height</li>
+            <li>Decoration</li>
+            <li>Transform</li>
+            <li>Indent</li>
+            <li>Spacing (word/letter)</li>
+            </h4>
+        </header>
+
+        <section>
+            <h4>Align</h4>
+            <div class="contenedor">
+                <p class="align-left">Left: texto alineado a la izquierda.</p>
+                <p class="align-center">Center: texto centrado.</p>
+                <p class="align-right">Right: texto alineado a la derecha.</p>
+                <p class="align-justify">Justify: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+            </div>
+
+            <h4>Line Height</h4>
+            <div class="contenedor">
+                <p class="lh-tight">line-height: 1. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                <p class="lh-normal">line-height: 1.5. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                <p class="lh-loose">line-height: 2. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                <p class="lh-xloose">line-height: 3. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+            </div>
+
+            <h4>Decoration</h4>
+            <div class="contenedor">
+                <p class="deco-none">none: sin decoración</p>
+                <p class="deco-underline">underline: subrayado</p>
+                <p class="deco-overline">overline: línea superior</p>
+                <p class="deco-linethrough">line-through: tachado</p>
+                <p class="deco-wavy">underline wavy: subrayado ondulado</p>
+            </div>
+
+            <h4>Transform</h4>
+            <div class="contenedor">
+                <p class="transform-upper">uppercase: todo en mayúscula</p>
+                <p class="transform-lower">LOWERCASE: TODO EN MINÚSCULA</p>
+                <p class="transform-capitalize">capitalize: cada palabra inicia en mayúscula</p>
+                <p class="transform-none">none: sin transformación</p>
+            </div>
+
+            <h4>Indent</h4>
+            <div class="contenedor">
+                <p class="indent-none">indent 0: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                <p class="indent-sm">indent 20px: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                <p class="indent-lg">indent 50px: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                <p class="indent-neg">indent -20px: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            </div>
+
+            <h4>Spacing (word/letter)</h4>
+            <div class="contenedor">
+                <p class="spacing-word-normal">word-spacing normal: Lorem ipsum dolor sit amet.</p>
+                <p class="spacing-word-wide">word-spacing 12px: Lorem ipsum dolor sit amet.</p>
+                <p class="spacing-letter-normal">letter-spacing normal: Lorem ipsum</p>
+                <p class="spacing-letter-wide">letter-spacing 4px: Lorem ipsum</p>
+                <p class="spacing-letter-tight">letter-spacing -1px: Lorem ipsum</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

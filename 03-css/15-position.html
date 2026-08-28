@@ -5,6 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>15-position</title>
     <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        div.box {
+            border: 4px solid #fff9;
+            border-radius: 4px;
+            width: 140px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #1c2b4a;
+        }
+
+        
+        .box1 {
+            position: static;
+            background: #cfd8dc;
+        }
+
+        
+        .contenedor-relative {
+            position: relative;
+            height: 160px;
+            border: 1px dashed #999;
+        }
+        .box2 {
+            position: relative;
+            top: 20px;
+            left: 30px;
+            background: #90caf9;
+        }
+
+        .contenedor-absolute {
+            position: relative;
+            height: 160px;
+            border: 1px dashed #999;
+        }
+        .box3 {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #a5d6a7;
+        }
+
+        
+        .box4 {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ef9a9a;
+        }
+
+    
+        .scroll-box {
+            height: 200px;
+            overflow-y: scroll;
+            border: 1px dashed #999;
+            padding: 10px;
+        }
+        .box5 {
+            position: sticky;
+            top: 0;
+            background: #fff59d;
+        }
+    </style>
 </head>
 <body class="css">
     <a href="index.html" class="btn-home">
@@ -13,12 +78,39 @@
     <main>
         <header>
             <h1>15-position</h1>
-            <h4>Lorem</h4>
+            <h4>
+            <li>Normal/Static</li>
+            <li>Relative</li>
+            <li>Absolute</li>
+            <li>Fixed</li>
+            <li>Sticky</li>
+            </h4>
         </header>
 
         <section>
-        </section>
+            <h4>Normal/Static</h4>
+            <div class="box box1">Static</div>
 
+            <h4>Relative</h4>
+            <div class="contenedor-relative">
+                <div class="box box2">Relative</div>
+            </div>
+
+            <h4>Absolute</h4>
+            <div class="contenedor-absolute">
+                <div class="box box3">Absolute</div>
+            </div>
+
+            <h4>Fixed</h4>
+            <div class="box box4">Fixed</div>
+
+            <h4>Sticky</h4>
+            <div class="scroll-box">
+                <div class="box box5">Sticky</div>
+                <p>Texto de relleno para hacer scroll y ver el efecto sticky. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis.</p>
+                <p>Más contenido para continuar el scroll dentro de esta caja.</p>
+            </div>
+        </section>
     </main>
 </body>
 </html>

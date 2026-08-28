@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20-pseudoclasses</title>
+    <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        section div {
+            margin-bottom: 20px;
+        }
+
+        /* :link y :visited */
+        a.enlace {
+            color: #90caf9;
+        }
+        a.enlace:link {
+            color: #90caf9;
+        }
+        a.enlace:visited {
+            color: #ce93d8;
+        }
+
+        /* :hover */
+        a.enlace:hover {
+            color: #fff59d;
+            text-decoration: underline;
+        }
+
+        
+        a.enlace:active {
+            color: #ef9a9a;
+        }
+
+    
+        input.campo {
+            padding: 6px;
+            border: 2px solid #999;
+            border-radius: 4px;
+        }
+        input.campo:focus {
+            border-color: #90caf9;
+            outline: none;
+            background: #1c2b4a33;
+        }
+
+
+        p.primera-letra:first-letter {
+            font-size: 2em;
+            font-weight: bold;
+            color: #a5d6a7;
+        }
+
+
+        p.primera-linea:first-line {
+            font-weight: bold;
+            color: #fff59d;
+        }
+
+        ul.lista li:first-child {
+            color: #ef9a9a;
+            font-weight: bold;
+        }
+
+        
+        p.decorado:before {
+            content: "» ";
+            color: #90caf9;
+        }
+        p.decorado:after {
+            content: " «";
+            color: #90caf9;
+        }
+
+        
+        div.heart {
+            background-color: transparent;
+            position: relative;
+            margin-block: 2rem;
+            height: 100px;
+            width: ;
+        }
+    </style>
+</head>
+<body class="css">
+    <a href="index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
+    </a>
+    <main>
+        <header>
+            <h1>20-pseudoclasses</h1>
+            <h4>Is used to define a special state of an element.</h4>
+        </header>
+
+        <section>
+            <div>
+                <h4>:link / :visited / :hover / :active</h4>
+                <a href="#" class="enlace">Pasa el mouse, haz clic o revisa el enlace</a>
+            </div>
+
+            <div>
+                <h4>:focus</h4>
+                <input type="text" class="campo" placeholder="Haz clic aquí">
+            </div>
+
+            <div>
+                <h4>:first-letter</h4>
+                <p class="primera-letra">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut.</p>
+            </div>
+
+            <div>
+                <h4>:first-line</h4>
+                <p class="primera-linea">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur ullamcorper ultricies nisi.</p>
+            </div>
+
+            <div>
+                <h4>:first-child</h4>
+                <ul class="lista">
+                    <li>Primer elemento (resaltado)</li>
+                    <li>Segundo elemento</li>
+                    <li>Tercer elemento</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>:before / :after</h4>
+                <p class="decorado">Texto con contenido agregado antes y después</p>
+            </div>
+
+            <div>
+                <h4>:lang(it)</h4>
+                <p lang="it">Questo testo è in corsivo perché è in italiano</p>
+                <p>This text is normal because it's in English</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
