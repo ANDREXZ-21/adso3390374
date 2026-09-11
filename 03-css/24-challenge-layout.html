@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24-Challenge Layout</title>
+    <link rel="stylesheet" href="../css/master.css">
+    <style>
+        body.reto {
+            margin: 0;
+            background-color: #17A053;
+            font-family: Arial, Helvetica, sans-serif;
+            display: block;
+        }
+
+        .sprite {
+            background-image: url(../src/imgs/spriteweb.png);
+            background-repeat: no-repeat;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 1rem 2rem;
+        }
+
+        header .logo {
+            width: 180px;
+            height: 180px;
+            background-position: -12px -400px;
+            margin: 0 auto 2rem;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        header nav a {
+            display: block;
+            background-color: #107537;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 1rem 2rem;
+            border-bottom: 4px solid #fff;
+            transition: background-color 0.3s ease;
+        }
+
+        header nav a:hover {
+            background-color: #0b5427;
+        }
+
+        .portafolio {
+            display: flex;
+            gap: 1.3rem;
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 1.3rem;
+            background-color: #09692e;
+        }
+
+        .portafolio .tarjeta {
+            position: relative;
+            flex: 1;
+            height: 222px;
+            border: 2px solid #fff;
+            overflow: hidden;
+        }
+
+        .portafolio .tarjeta .sprite {
+            width: 100%;
+            height: 100%;
+        }
+
+        .portafolio .tarjeta:nth-child(1) .sprite {
+            background-position: -465px 0;
+        }
+
+        .portafolio .tarjeta:nth-child(2) .sprite {
+            background-position: -465px -205px;
+        }
+
+        .portafolio .tarjeta:nth-child(3) .sprite {
+            background-position: -465px -418px;
+        }
+
+        .portafolio .tarjeta h3 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            margin: 0;
+            padding: 1.6rem 0;
+            text-align: center;
+            color: #000;
+            background-color: rgba(255, 255, 255, 0.212);
+            transition: background-color 0.3s ease;
+        }
+
+        .portafolio .tarjeta:hover h3 {
+            background-color: rgba(255, 255, 255, 0.856);
+        }
+
+        .sprites {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0.6rem;
+            background-color: #09692e;
+        }
+
+        .sprites .fila {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            padding: 1.5rem 2rem;
+            background-color: #fff;
+        }
+
+        .sprites .fila .icono {
+            width: 86px;
+            height: 95px;
+            flex-shrink: 0;
+            background-position: -299px -493px;
+        }
+
+        .sprites .fila p {
+            flex: 1;
+            margin: 0;
+            color: #333;
+            line-height: 1.7;
+            text-align: justify;
+            transition: color 0.3s ease;
+        }
+
+        .sprites .fila:hover p {
+            color: #1e7d3c;
+        }
+
+        .sprites .fila .lata {
+            width: 90px;
+            height: 157px;
+            flex-shrink: 0;
+            background-position: -95px -213px;
+        }
+
+        footer {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 2rem;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        footer .img {
+            width: 335px;
+            height: 182px;
+            margin: 0 auto 1.5rem;
+            background-position: -465px -418px;
+        }
+
+        footer nav {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        footer nav a {
+            color: #333;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid transparent;
+            transition: border-color 0.3s ease, color 0.3s ease;
+        }
+
+        footer nav a:hover {
+            color: #107537;
+            border-bottom-color: #107537;
+        }
+    </style>
+</head>
+<body class="reto">
+    <a href="index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path
+                d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
+            </path>
+        </svg>
+    </a>
+
+    <header>
+        <div class="logo sprite"></div>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Portafolio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="portafolio">
+        <div class="tarjeta">
+            <h3>Sprite 01</h3>
+            <div class="sprite"></div>
+        </div>
+        <div class="tarjeta">
+            <h3>Sprite 02</h3>
+            <div class="sprite"></div>
+        </div>
+        <div class="tarjeta">
+            <h3>Sprite 03</h3>
+            <div class="sprite"></div>
+        </div>
+    </section>
+
+    <section class="sprites">
+        <div class="fila">
+            <div class="icono sprite"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, laboriosam cumque sit vero praesentium id tempore, quibusdam asperiores eius quaerat expedita repudiandae sequi deleniti labore quis animi. Reprehenderit, ut! Sit!</p>
+            <div class="lata sprite"></div>
+        </div>
+        <div class="fila">
+            <div class="icono sprite"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, eum earum! Quam, odio? Voluptate qui quam, iusto rerum eaque placeat quaerat molestiae veritatis alias dicta facere doloremque quia, quasi ipsam?</p>
+            <div class="lata sprite"></div>
+        </div>
+        <div class="fila">
+            <div class="icono sprite"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate culpa fuga sed velit in dicta. Dolores, ullam debitis illum ipsam minus, doloremque obcaecati adipisci, quia sunt maxime sequi? Aut, eaque?</p>
+            <div class="lata sprite"></div>
+        </div>
+        <div class="fila">
+            <div class="icono sprite"></div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo ducimus labore pariatur quos eos dicta excepturi perspiciatis eius incidunt debitis architecto id neque eum voluptatum, obcaecati quasi ut. Itaque, sunt? </p>
+            <div class="lata sprite"></div>
+        </div>
+        <div class="fila">
+            <div class="icono sprite"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea temporibus maxime placeat amet vitae voluptatum commodi pariatur animi, quos praesentium consequuntur error labore! Totam voluptatum natus expedita vero laborum voluptates?</p>
+            <div class="lata sprite"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="img sprite"></div>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Portafolio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </footer>
+</body>
+</html>
