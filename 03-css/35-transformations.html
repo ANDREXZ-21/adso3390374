@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>35-transformations</title>
+    <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        section {
+            img {
+                display: block;
+                margin: 1rem auto;
+
+                &.transform1 {
+                    transform: rotate(0.25turn);
+                }
+
+                &.transform2 {
+                    transform: scale(.25);
+                }
+
+                &.transform3 {
+                    transform: TranslateX(-80px);
+                }
+
+                &.transform4 {
+                    transform: skew(-30deg);
+                }
+
+                &.transform5 {
+                    transform: rotate(-45deg) scale(1.2);
+                }
+
+
+            }
+        }
+    </style>
+</head>
+<body class="css">
+    <a href="index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
+    </a>
+    <main>
+        <header>
+            <h1>35-transformations</h1>
+            <h4></h4>
+        </header>
+
+        <section>
+            <section>
+            <h4>Rotate: 90deg</h4>
+            <img class="transform1" src="imgs/bestiaboy.png" width="180px">
+            <h4>Scale: 0.5</h4>
+            <img class="transform2" src="imgs/bestiaboy.png" width="180px">
+            <h4>TranslateX: -100px</h4>
+            <img class="transform3" src="imgs/bestiaboy.png" width="180px">
+            <h4>Skew: 30deg</h4>
+            <img class="transform4" src="imgs/bestiaboy.png" width="180px">
+            <h4>Rotate Scale:</h4>
+            <img class="transform5" src="imgs/bestiaboy.png" width="180px">
+        </section>
+        </section>
+
+    </main>
+</body>
+</html>
