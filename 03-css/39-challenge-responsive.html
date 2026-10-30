@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>39-challenge-responsive</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,300;1,800&display=swap');
+
+        :root {
+            --color-1: #ffff;
+            --color-2: #ffffff;
+            --background: #2f2830;
+            --panel: rgba(0, 0, 0, 0.65);
+            --transition: all 0.4s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: var(--transition);
+        }
+
+        body {
+            background: var(--background) url("imgs/fondo dead.jpg")
+                        no-repeat center center / cover;
+            background-attachment: fixed;
+            font-family: 'Poppins', sans-serif;
+            color: var(--color-2);
+        }
+
+        main {
+            width: 1280px;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+       
+
+        header .logo {
+            height: 360px;
+            background: url("imgs/dead-removebg-preview.png")
+                        no-repeat center center / contain;
+        }
+
+     
+
+        section.boxes {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0;
+        }
+
+        section.boxes div {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            width: 280px;
+            height: 280px;
+            margin: 14px;
+            overflow: hidden;
+            cursor: pointer;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 16px;
+        }
+
+        section.boxes div:nth-child(1) {
+            background-image: url("imgs/yagami.jpg");
+        }
+
+        section.boxes div:nth-child(2) {
+            background-image: url("imgs/l.jpg");
+        }
+
+        section.boxes div:nth-child(3) {
+            background-image: url("imgs/misa.jpg");
+        }
+
+        section.boxes div:nth-child(4) {
+            background-image: url("imgs/ryuk.jpg");
+        }
+
+        section.boxes div:hover {
+            transform: scale(1.05);
+        }
+
+        section.boxes div p {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            min-height: 70px;
+            padding: 18px 10px;
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--color-1);
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(4px);
+            border-top: 2px solid var(--color-2);
+        }
+
+        section.boxes div:hover p {
+            min-height: 100px;
+            padding-top: 30px;
+        }
+
+
+        footer {
+            margin-top: 50px;
+            padding-bottom: 30px;
+        }
+
+        footer article {
+            min-height: 280px;
+            margin: 40px 28px;
+            padding: 20px;
+            background: var(--panel);
+            backdrop-filter: blur(3px);
+            font-size: 0;
+        }
+
+        footer article figure {
+            display: inline-block;
+            vertical-align: top;
+            width: 280px;
+            height: 280px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        footer article.art1 figure {
+            background-image: url("imgs/rem.jpg");
+        }
+
+        footer article.art2 figure {
+            background-image: url("imgs/near.jpg");
+        }
+
+        footer article div {
+            display: inline-block;
+            vertical-align: top;
+            width: calc(100% - 285px);
+            padding-left: 20px;
+            font-size: 16px;
+        }
+
+        footer article div h2 {
+            margin: 10px 0 20px;
+            padding-bottom: 10px;
+            color: var(--color-1);
+            font-size: 2rem;
+            border-bottom: 2px solid var(--color-2);
+        }
+
+        footer article div p {
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        
+
+        @media (max-width: 1290px) {
+
+            main {
+                width: 680px;
+            }
+
+            header .logo {
+                height: 300px;
+            }
+
+            section.boxes {
+                margin-top: 30px;
+            }
+
+            section.boxes div {
+                width: 280px;
+                height: 280px;
+                margin: 10px;
+            }
+
+            footer article {
+                margin: 30px 10px;
+                padding: 15px;
+            }
+
+            footer article figure {
+                width: 220px;
+            }
+
+            footer article div {
+                width: calc(100% - 225px);
+                padding-left: 15px;
+            }
+
+            footer article div h2 {
+                font-size: 1.5rem;
+            }
+
+            footer article div p {
+                max-height: 180px;
+                overflow-y: auto;
+                padding-right: 8px;
+            }
+        }
+
+       
+
+        @media (max-width: 690px) {
+
+            body {
+                background: var(--background) url("imgs/responsive/bg.png")
+                            no-repeat center center / cover;
+                background-attachment: fixed;
+            }
+
+            main {
+                width: 100%;
+                padding: 0 15px;
+            }
+
+            header .logo {
+                height: 240px;
+            }
+
+            section.boxes {
+                margin-top: 25px;
+                text-align: center;
+            }
+
+            section.boxes div {
+                display: block;
+                width: 90%;
+                height: 340px;
+                margin: 25px auto;
+            }
+
+            section.boxes div p {
+                min-height: 70px;
+                font-size: 1.3rem;
+            }
+
+            footer {
+                margin-top: 30px;
+            }
+
+            footer article {
+                margin: 30px auto;
+                padding: 15px;
+                width: 95%;
+                text-align: center;
+            }
+
+            footer article figure {
+                display: block;
+                width: 100%;
+                height: 260px;
+                margin: 0 auto;
+                background-size: contain;
+            }
+
+            footer article div {
+                display: block;
+                width: 100%;
+                padding: 0;
+                text-align: left;
+            }
+
+            footer article div h2 {
+                margin-top: 10px;
+                font-size: 1.5rem;
+                text-indent: 10px;
+            }
+
+            footer article div p {
+                max-height: none;
+                padding: 10px;
+                font-size: 0.9rem;
+                line-height: 1.7;
+                overflow: visible;
+            }
+        }
+
+        
+
+        @media (max-width: 380px) {
+
+            header .logo {
+                height: 190px;
+            }
+
+            section.boxes div {
+                height: 280px;
+            }
+
+            footer article figure {
+                height: 220px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <header>
+            <div class="logo"></div>
+        </header>
+
+        <section class="boxes">
+
+            <div class="box1">
+                <p>Yagami</p>
+            </div>
+
+            <div class="box2">
+                <p>L</p>
+            </div>
+
+            <div class="box3">
+                <p>Misa</p>
+            </div>
+
+            <div class="box4">
+                <p>Ryuk</p>
+            </div>
+
+        </section>
+
+        <footer>
+
+            <article class="art1">
+
+                <figure></figure>
+
+                <div class="content">
+
+                    <h2>Rem</h2>
+
+                    <p>
+                        Rem es un personaje fundamental de la primera mitad de Death Note.
+                        A diferencia de Ryuk, ella es una Shinigami (diosa de la muerte)
+                        femenina que se involucra profundamente a nivel emocional con
+                        el mundo humano.
+                    </p>
+
+                </div>
+
+            </article>
+
+            <article class="art2">
+
+                <figure></figure>
+
+                <div class="content">
+
+                    <h2>Near</h2>
+
+                    <p>
+                        Near (Nate River) es uno de los personajes principales de la
+                        segunda mitad del anime y manga Death Note, introducido como
+                        el sucesor principal de L.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </footer>
+
+    </main>
+
+</body>
+</html>

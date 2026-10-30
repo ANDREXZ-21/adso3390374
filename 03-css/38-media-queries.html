@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>38-media-queries</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,300;1,800&display=swap');
+
+        * {
+            transition: all 0.5s ease;
+        }
+        body {
+            background-color: #013571;
+            color: white;
+            font-family: poppins, sans-serif;
+            padding: 1rem;
+
+            main {
+                border: 10px solid #fff;
+                padding: 1rem;
+                margin: 0 auto;
+                width: 1228px;0
+                
+
+                header {
+                    figure.logo {
+                        background: url(imgs/pepsi01.png)
+                        no-repeat center;
+                        
+                        height: 354px;
+                        width: 919px;
+                        display: block;
+                        margin: 0 auto;
+                        padding: 0;
+                    }
+
+                    menu {
+                        padding: 0;
+                        a:is(:link, :visited){
+                        
+                        background-color: #fff;
+                        border: 2px solid #fff;
+                        color: #013571;
+                        font-size: 1.2rem;
+                        font-weight: 500;
+                        text-decoration: none;
+                        text-align: center;
+                        padding: 0.8rem 1rem;
+                        display: inline-block;
+                        width: 200px;
+                        transition: all 0.5s ease;
+                        
+                        &:hover {
+                            transform: translateY(20px) scale(1.05);
+                        }
+                    }
+                    
+                }
+            }
+
+            section {
+                h2 {
+                    text-align: center;
+                    font-size: 2.5rem;
+                    font-weight: 400;
+                }
+                h2:nth-of-type(2) {display: none;}
+                h2:last-of-type {display: none;}
+
+                p {
+                    text-align: justify;
+                    line-height: 1.8rem;
+                }
+            }
+
+        }
+    }
+
+    @media (max-width: 1280px) {
+        body {
+            main {
+                width: 800px;
+
+                header {
+                    figure.logo {
+                        background: url(imgs/pepsi02.png);
+                        height: 370px;
+                        width: 349px;
+                    }
+
+                    menu {
+                        a:is(:link, :visited) {
+                            width: 124px;
+                        }
+                    }
+                }
+
+                section {
+                    h2:first-of-type {display: none;}
+                    h2:nth-of-type(2) {display: block;}
+                    p{
+                        text-align: justify;
+                        line-height: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 880px) {
+        body {
+            main {
+                width: 380px;
+
+                header {
+                    figure.logo {
+                        background: url(imgs/pepsi03.png) no-repeat center;
+                        height: 162px;
+                        width: 156px;
+                    }
+
+                    menu {
+                        a:is(:link, :visited) {
+                            margin-bottom: 0.2rem;
+                            display: block;
+                            width: 350px;
+
+                        }
+                    }
+                }
+
+                section {
+                    h2:nth-of-type(2) {display: none;}
+                    h2:last-of-type {
+                        font-size: 2rem;
+                        display: block;
+                    }
+                    p{
+                        text-align: justify;
+                        line-height: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+    </style>
+</head>
+<body>
+    <main>
+            <header>
+                <figure class="logo"></figure>
+                <menu>
+                    <a href="#">home</a>
+                    <a href="#">about</a>
+                    <a href="#">servicios</a>
+                    <a href="#">products</a>
+                    <a href="#">contact</a>
+                </menu>
+            </header>
+            <section>
+                <h2>desktop: (> 1280px)</h2>
+                <h2>tablet: (> 800px < 1280px)</h2>
+                <h2>mobile: (> 800px )</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nesciunt nulla sapiente a eligendi! Eius a deleniti quam commodi saepe laudantium quisquam obcaecati dolor quas, magnam, aspernatur harum molestias consequuntur, eum magni odio voluptatem atque? Ad, nam! Odio quo ullam magnam voluptatum debitis veritatis illo totam numquam, quaerat esse quae repellendus ducimus architecto perferendis porro reiciendis quidem enim rem error, eveniet nisi a velit. Dignissimos maxime harum unde. Facilis odio nam sit veritatis fuga voluptate, quo dolores iusto in animi, culpa cupiditate laborum error repellat sequi aspernatur deserunt cumque ratione, ducimus laboriosam aliquam voluptatibus id adipisci? Voluptates atque ullam ex amet ab. Aliquid voluptates officiis, molestias, architecto praesentium, tempora earum iste quos tenetur cupiditate nemo inventore quis labore dignissimos vero!
+                </p>
+            </section>
+        </main>
+</body>
+</html>
