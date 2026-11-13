@@ -9,12 +9,16 @@
         :root {
         --size: 256px
         }
+
+        body {
+            overflow-y: hidden;
+        }
         
         section {
             div.bg {
                 background: url(imgs/bg-steps.png)
                             no-repeat center;
-                height: 600px;
+                height: 400px;
                 width: 320px;
                 background-size: cover;
                 border-radius: 12px;
@@ -37,12 +41,25 @@
 
                 &.front { background-position-y: 0 ; }
                 &.left  { background-position-y: calc(var(--size) * -1) ; }
-                &.rigth { background-position-y: calc(var(--size) * -2) ; }
+                &.right { background-position-y: calc(var(--size) * -2) ; }
                 &.back  { background-position-y: calc(var(--size) * -3) ; }
 
                 }
 
             }
+        }
+
+        div.instrucciones {
+            background-color: #000c;
+            border-radius: 12px;
+            corner-shape: squircle;
+            color: #ffff;
+            text-align: center;
+            position: absolute;
+            padding: 0.4rem;
+            top: 0.6rem;
+            left: 0.6rem;
+            width: 300px;
         }
 
         @keyframes animtrainer {
@@ -64,10 +81,49 @@
 
         <section>
            <div class="bg">
+            <div class="instrucciones">
+                manito toque las flechas de direccion pa que ese man se mueva: <br>
+                &larr; &uarr; &rarr; &darr;
+            </div>
             <div id="trainer" class="front"></div>
            </div> 
         </section>
 
     </main>
+
+    <script>
+        const trainer = document.getElementById('trainer');
+        document.addEventListener('keyup' , function(e) {
+            // console.log(e.keyCode);
+            switch (e.keyCode) {
+                case 37:
+                    trainer.className = '';
+                    trainer.classList.add('left');
+                    break;
+
+
+                   
+                    case 38:
+                    trainer.className = '';
+                    trainer.classList.add('back');
+                    break;
+
+
+                     
+                    case 39:
+                    trainer.className = '';
+                    trainer.classList.add('right');
+                    break;
+
+                     
+                    case 40:
+                    trainer.className = '';
+                    trainer.classList.add('front');
+                    break;
+
+            }
+        
+        })
+    </script>
 </body>
 </html>
